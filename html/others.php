@@ -27,76 +27,10 @@
         print("</tr>");
         }
         echo "</table>";
-        echo '<table border="1">';
-        $sql = "SELECT * FROM status";
-        $res = $mysqli->query($sql);
-        print("<tr>");
-        for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$res->fetch_field_direct($i)->name."</td>" );
-        }
-        print("</tr>");
-        while($row = $res->fetch_array()) {
-            print("<tr>");
-            for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$row[$i]."</td>" );
-        }
-        print("</tr>");
-        }
-        echo "</table>";
 
         //table type
         echo '<table border="1">';
         $sql = "SELECT * FROM type";
-        $res = $mysqli->query($sql);
-        print("<tr>");
-        for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$res->fetch_field_direct($i)->name."</td>" );
-        }
-        print("</tr>");
-        while($row = $res->fetch_array()) {
-            print("<tr>");
-            for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$row[$i]."</td>" );
-        }
-        print("</tr>");
-        }
-        echo "</table>";
-        echo '<table border="1">';
-        $sql = "SELECT * FROM status";
-        $res = $mysqli->query($sql);
-        print("<tr>");
-        for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$res->fetch_field_direct($i)->name."</td>" );
-        }
-        print("</tr>");
-        while($row = $res->fetch_array()) {
-            print("<tr>");
-            for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$row[$i]."</td>" );
-        }
-        print("</tr>");
-        }
-        echo "</table>";
-
-                //table status
-        echo '<table border="1">';
-        $sql = "SELECT * FROM status";
-        $res = $mysqli->query($sql);
-        print("<tr>");
-        for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$res->fetch_field_direct($i)->name."</td>" );
-        }
-        print("</tr>");
-        while($row = $res->fetch_array()) {
-            print("<tr>");
-            for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$row[$i]."</td>" );
-        }
-        print("</tr>");
-        }
-        echo "</table>";
-        echo '<table border="1">';
-        $sql = "SELECT * FROM status";
         $res = $mysqli->query($sql);
         print("<tr>");
         for( $i = 0; $i < $res->field_count; $i++ ){
@@ -129,23 +63,7 @@
         print("</tr>");
         }
         echo "</table>";
-        echo '<table border="1">';
-        $sql = "SELECT * FROM status";
-        $res = $mysqli->query($sql);
-        print("<tr>");
-        for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$res->fetch_field_direct($i)->name."</td>" );
-        }
-        print("</tr>");
-        while($row = $res->fetch_array()) {
-            print("<tr>");
-            for( $i = 0; $i < $res->field_count; $i++ ){
-            print( "<td>".$row[$i]."</td>" );
-        }
-        print("</tr>");
-        }
-        echo "</table>";
-        exit();
+        $mysqli->close();
         ?>
     <br>
     keyword: 未実装(実装するかは要検討)

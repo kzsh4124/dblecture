@@ -24,7 +24,7 @@
         }
         print("</tr>");
         }
-        exit();
+        $mysqli->close();
         ?>
     </table>
     <br>
