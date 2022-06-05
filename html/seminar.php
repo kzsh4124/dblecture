@@ -1,6 +1,7 @@
 <html>
     <head><title>seminar.php</title></head>
     <body>
+    <table border="1">
         <?php
         $mysqli = new mysqli('localhost', 's2111609', 'hogehoge', 's2111609');
         if ($mysqli->connect_error) {
@@ -23,7 +24,10 @@
         }
         print("</tr>");
         }
+        exit();
         ?>
+    </table>
+    <br>
     <a href="index.html">トップへ戻る</a>
     </body>
 </html>

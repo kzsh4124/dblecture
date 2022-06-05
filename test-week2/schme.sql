@@ -24,6 +24,7 @@ subject_id int primary key,
 name varchar(30)
 );
 
+
 create table keyword(
 word_id int auto_increment primary key,
 keyword varchar(40),
@@ -41,4 +42,3 @@ member_id int,
 is_organizer bit,
 primary key(seminar_id, member_id)
 );
-
