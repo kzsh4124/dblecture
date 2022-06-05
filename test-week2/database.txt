@@ -1,0 +1,121 @@
+-- MySQL dump 9.07
+--
+
+CREATE TABLE book_table (
+  bid int(10) unsigned NOT NULL auto_increment,
+  bisbn varchar(13) default NULL,
+  btitle varchar(20) NOT NULL default '',
+  bauth varchar(20) NOT NULL default '',
+  bpub varchar(20) NOT NULL default '',
+  bpubyear varchar(4) default NULL,
+  PRIMARY KEY  (bid)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'book_table'
+--
+
+INSERT INTO book_table VALUES (1,'4-06-652762-4','北の森のお姫様','北ノ森章太郎','架空社','1995');
+INSERT INTO book_table VALUES (2,'4-04-262344-4','お料理バンバンザイ','田中康志','幻社','1987');
+INSERT INTO book_table VALUES (3,'4-03-322223-5','ホットマン・ジョー','北村ノボル','メッセ宝社','1999');
+INSERT INTO book_table VALUES (4,'5-25-443435-2','携帯電話の裏テック','山下茂','テクニックジャパン社','2000');
+INSERT INTO book_table VALUES (5,'3-55-269043-9','宮本武蔵小金井','佐々木智子','小次郎社','1942');
+
+--
+-- Table structure for table 'menu_table'
+--
+
+CREATE TABLE menu_table (
+  id int(10) unsigned NOT NULL auto_increment,
+  name varchar(20) NOT NULL default '',
+  price int(11) NOT NULL default '0',
+  PRIMARY KEY  (id)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'menu_table'
+--
+
+INSERT INTO menu_table VALUES (1,'coffee',500);
+INSERT INTO menu_table VALUES (2,'tea',500);
+INSERT INTO menu_table VALUES (3,'orange juice',550);
+
+--
+-- Table structure for table 'bbs_table'
+--
+
+CREATE TABLE bbs_table (
+  message_sequence int(11) NOT NULL auto_increment,
+  contributor text,
+  mail_address text,
+  home_page_uri text,
+  subject text,
+  message text,
+  pass_word text,
+  write_date varchar(10) default NULL,
+  PRIMARY KEY  (message_sequence)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'bbs_table'
+--
+
+--
+-- Table structure for table 'field_table'
+--
+
+CREATE TABLE field_table (
+  field varchar(14) NOT NULL default '',
+  field_name text,
+  min_figure int(11) default NULL,
+  max_figure int(11) default NULL,
+  PRIMARY KEY  (field)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'field_table'
+--
+
+INSERT INTO field_table VALUES ('title','予定タイトル',0,100);
+INSERT INTO field_table VALUES ('detail','予定詳細',0,500);
+INSERT INTO field_table VALUES ('schedule_date','書き込み日付',8,8);
+INSERT INTO field_table VALUES ('time_from','FROM時間',4,4);
+INSERT INTO field_table VALUES ('time_to','TO時間',4,4);
+
+--
+-- Table structure for table 'schedule_table'
+--
+
+CREATE TABLE schedule_table (
+  user_id varchar(16) NOT NULL default '',
+  schedule_date varchar(8) NOT NULL default '',
+  sequence int(11) NOT NULL default '0',
+  time_from varchar(6) default NULL,
+  time_to varchar(6) default NULL,
+  title text,
+  detail text,
+  update_date varchar(14) default NULL,
+  PRIMARY KEY  (user_id,schedule_date,sequence)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'schedule_table'
+--
+
+
+--
+-- Table structure for table 'user_table'
+--
+
+CREATE TABLE user_table (
+  user_id varchar(16) NOT NULL default '',
+  pass_word text,
+  usr_name text,
+  PRIMARY KEY  (user_id)
+) ENGINE=MyISAM;
+
+--
+-- Dumping data for table 'user_table'
+--
+
+

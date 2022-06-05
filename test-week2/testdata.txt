@@ -1,0 +1,14 @@
+insert into seminar (id,name, status, subject, difficulty, day) values(1,'semi1', 0, 1, 0, 3);
+insert into seminar (id,name, status, subject, difficulty, day) values(2,'semi2', 1, 1, 0, 1);
+insert into seminar (id,name, status, subject, difficulty, day) values(3,'semi3', 1, 2, 0, 5);
+insert into seminar (id,name, status, subject, difficulty, day) values(4,'semi4', 1, 2, 0, 6);
+insert into seminar (id,name, status, subject, difficulty, day) values(5,'semi5', 2, 3, 0, 7);
+insert into seminar (id,name, status, subject, difficulty, day) values(6,'semi6', 0, 4, 0, 3);
+insert into seminar (id,name, status, subject, difficulty, day) values(7,'semi7', 2, 1, 0, 2);
+insert into seminar (id,name, status, subject, difficulty, day) values(8,'semi8', 1, 1, 0, 4);
+insert into seminar (id,name, status, subject, difficulty, day) values(9,'semi9', 0, 1, 0, 2);
+insert into seminar (id,name, status, subject, difficulty, day) values(10,'semi10', 1, 1, 0, 3);
+
+insert into status value(0,'休止中/準備中');
+insert into status value(1,'開催中');
+insert into status value(2,'終了');
