@@ -4,9 +4,11 @@ name varchar(40) not null,
 status int not null,
 subject int,
 difficulty int,
-day int not null,
+day varchar(20),
 start_time time,
-type int
+type int,
+approval int,
+explanation varchar(1000),
 );
 
 create table status(
