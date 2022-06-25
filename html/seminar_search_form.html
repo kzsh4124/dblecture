@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ゼミ検索フォーム</title>
+    </head>
+    <body>
+        <h1>ゼミ検索フォーム</h1>
+        <form method="post" action="seminar_show_result.php">
+            <div>
+                フリーワード <input type="text" name="word">
+            </div>
+            <div>
+                曜日
+                <select name="day">
+                    <option value="">選択してください</option>
+                    <option value="月曜日">月曜日</option>
+                    <option value="火曜日">火曜日</option>
+                    <option value="水曜日">水曜日</option>
+                    <option value="木曜日">木曜日</option>
+                    <option value="金曜日">金曜日</option>
+                    <option value="土曜日">土曜日</option>
+                    <option value="日曜日">日曜日</option>
+                </select>
+            </div>
+            <div>
+                教科
+                <select name="subject">
+                    <option value="">選択してください</option>
+                    <option value="0">情報科学</option>
+                    <option value="1">文学</option>
+                    <option value="2">言語学</option>
+                    <option value="3">社会学</option>
+                    <option value="4">数学</option>
+                    <option value="5">天文学</option>
+                    <option value="6">物理学</option>
+                    <option value="7">地学</option>
+                    <option value="8">化学</option>
+                    <option value="9">工学</option>
+                    <option value="10">生物学</option>
+                    <option value="11">医学</option>
+                    <option value="12">獣医学</option>
+                    <option value="13">音楽</option>
+                    <option value="14">その他</option>
+                </select>
+            </div>
+            <h2>検索範囲</h2>
+            <p>フリーワード検索の範囲を選択してください(ただし、ゼミ名は常に検索対象に含まれています)</p>
+            <div>
+                <input type="checkbox" id="keyword" name="range[]" value="keyword">
+                <label for="keyword">キーワード</label>
+            </div>
+        </form>
+    </body>
+</html>

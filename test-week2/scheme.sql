@@ -7,8 +7,8 @@ difficulty int,
 day varchar(20),
 start_time time,
 type int,
-approval int,
-explanation varchar(1000),
+approval int default 1,
+content varchar(1000),
 );
 
 create table status(
