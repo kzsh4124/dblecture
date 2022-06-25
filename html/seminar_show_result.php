@@ -21,7 +21,7 @@ try {
         $range = $_POST['range'];
     }
     //PDOオブジェクトの生成
-    $pdo = new PDO('mysql:dbname=s2111609;host=localhost;charset=utf8 ', 's2111609', 'hogehoge', [
+    $pdo = new PDO('mysql:dbname=s2111609;host=localhost;charset=utf8mb4', 's2111609', 'hogehoge', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
