@@ -39,3 +39,15 @@ try{
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
     exit($e->getMessage());
 }
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>送信</title>
+    </head>
+    <body>
+        <h1>送信に成功しました。</h1>
+        <h2>承認されるまでしばらくお待ち下さい</h2>
+    </body>
