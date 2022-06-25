@@ -35,6 +35,7 @@ try {
     se.difficulty AS se_diff,
     se.day AS se_day,
     se.start_time AS se_time,
+    se.content AS se_content,
     st.name AS st_name,
     ty.name AS ty_name,
     su.name AS su_name
@@ -104,12 +105,14 @@ header('Content-Type: text/html; charset=utf-8');
 
 
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>Example</title>
     </head>
     <body>
+        <h1>検索結果</h1>
         <table border="1">
             <tr>
                 <td>id</td>
@@ -118,6 +121,7 @@ header('Content-Type: text/html; charset=utf-8');
                 <td>時間</td>
                 <td>開催状況</td>
                 <td>教科</td>
+                <td>概要</td>
             </tr>
 <?php foreach ($rows as $row): ?>
             <tr>
@@ -125,10 +129,10 @@ header('Content-Type: text/html; charset=utf-8');
                 <td><?=h($row['se_name'])?></td>
                 <td><?=h($row['se_day'])?> </td>
                 <td><?=h($row['se_time'])?> </td>
-                <td><?=h($row['se_diff'])?> </td>
                 <td><?=h($row['st_name'])?> </td>
                 <td><?=h($row['ty_name'])?> </td>
                 <td><?=h($row['su_name'])?> </td>
+                <td><?=h($row['se_content']) ?></td>
             </tr>
 <?php endforeach; ?>
         </table>
