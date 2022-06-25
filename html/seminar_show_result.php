@@ -29,7 +29,7 @@ try {
     //プレースホルダの動的な生成
     //select列と結合の設定
     $selecter =<<<"EOT"
-    SELECT DISTINCT ON (se.id)
+    SELECT
     se.id AS se_id,
     se.name AS se_name,
     se.difficulty AS se_diff,
@@ -81,6 +81,7 @@ try {
     }else{
         $sql = $selecter;
     }
+    $sql.= 'GROUP BY se.id';
 
     // クエリの実行
     $stmt = $pdo->prepare($sql);
