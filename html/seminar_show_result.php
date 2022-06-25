@@ -56,7 +56,7 @@ try {
         $word_querry = 'se.name LIKE ?';
         $values[] = '%'. addcslashes($word, '\_%') .'%';
         if(in_array('keyword', $range, true)){
-            $word_querry.= 'OR kw.keyword LIKE ?';
+            $word_querry.= ' OR kw.keyword LIKE ?';
             $values[] = '%'. addcslashes($word, '\_%') .'%';
         }
         $word_querry = "( $word_querry )";
@@ -111,6 +111,14 @@ header('Content-Type: text/html; charset=utf-8');
     </head>
     <body>
         <table border="1">
+            <tr>
+                <td>id</td>
+                <td>ゼミ名</td>
+                <td>曜日</td>
+                <td>時間</td>
+                <td>開催状況</td>
+                <td>教科</td>
+            </tr>
 <?php foreach ($rows as $row): ?>
             <tr>
                 <td><?=h($row['se_id'])?></td>
