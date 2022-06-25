@@ -109,7 +109,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Example</title>
+        <title>検索結果</title>
     </head>
     <body>
         <h1>検索結果</h1>
