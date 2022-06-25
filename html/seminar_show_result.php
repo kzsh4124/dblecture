@@ -77,7 +77,7 @@ try {
 
     // 連結
     if($holders){
-        $sql = $selecter . 'WHERE (' . implode(' AND ', $holders) . ')';
+        $sql = $selecter . ' WHERE (' . implode(' AND ', $holders) . ')';
     }else{
         $sql = $selecter;
     }
