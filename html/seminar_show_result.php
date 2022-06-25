@@ -130,7 +130,6 @@ header('Content-Type: text/html; charset=utf-8');
                 <td><?=h($row['se_day'])?> </td>
                 <td><?=h($row['se_time'])?> </td>
                 <td><?=h($row['st_name'])?> </td>
-                <td><?=h($row['ty_name'])?> </td>
                 <td><?=h($row['su_name'])?> </td>
                 <td><?=h($row['se_content']) ?></td>
             </tr>
