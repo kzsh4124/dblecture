@@ -8,7 +8,7 @@ day varchar(20),
 start_time time,
 type int,
 approval int default 1,
-content varchar(1000),
+content varchar(1000)
 );
 
 create table status(
@@ -33,7 +33,7 @@ keyword varchar(40),
 seminar_id int
 );
 
-crete table member(
+create table member(
 member_id int auto_increment primary key,
 name varchar(30)
 );
