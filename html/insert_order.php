@@ -17,7 +17,7 @@ try{
     if(isset($_POST['time'])){
         $time = $_POST['time'];
     }else{
-        $time='';
+        $time=NULL;
     }
     if(isset($_POST['content'])){
         $content = $_POST['content'];
