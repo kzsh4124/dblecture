@@ -91,7 +91,7 @@ function h($str){
                 <td><?=h($row_w['su_name'])?> </td>
                 <td><?=h($row_w['se_content']) ?></td>
                 <td>
-                <form method="post" action="<?='approval.php?id=',$row_a['se_id']?>">
+                <form method="post" action="<?='approval.php?id=',$row_w['se_id']?>">
                     <input type="hidden" name="pw" value="<?= $password ?>">
                     <input type="submit" name="submit" value="承認">
                     </form>
