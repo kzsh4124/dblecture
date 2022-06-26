@@ -11,7 +11,7 @@ try {
     ]);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
-    $sql = "UPDATE approval=1 WHERE id=?";
+    $sql = "UPDATE seminar SET approval=1 WHERE id=?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$id]);
 }catch (PDOException $e) {
