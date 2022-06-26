@@ -92,7 +92,8 @@ try{
         </table>
 
         <h2>変更、削除</h2>
-        <table>
+        <?= $sql?>
+        <table border="1">
         <tr>
                 <td>id</td>
                 <td>ゼミ名</td>
