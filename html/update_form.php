@@ -49,6 +49,8 @@ if (isset($_GET['id'])){
                     <option value="">選択してください</option>
                     <option value="0">準備中</option>
                     <option value="1">開催中</option>
+                    <option value="2">休止中</option>
+                    <option value="3">終了</option>
                 </select>
                 ※必須
             </div>
