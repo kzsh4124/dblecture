@@ -32,6 +32,9 @@ if(isset($_POST['time'])){
 }else{
     $time=NULL;
 }
+if($time == ''){
+    $time = NULL;
+}
 if(isset($_POST['content'])){
     $content = $_POST['content'];
 }else{

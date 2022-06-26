@@ -19,6 +19,9 @@ try{
     }else{
         $time=NULL;
     }
+    if($time == ''){
+        $time = NULL;
+    }
     if(isset($_POST['content'])){
         $content = $_POST['content'];
     }else{
