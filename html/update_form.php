@@ -18,7 +18,7 @@ if (isset($_GET['id'])){
     </head>
     <body>
         <h1>ゼミ更新フォーム</h1>
-        <form method="post" action="update.php">
+        <form method="post" action="<?= 'update.php?id=',$id ?>">
             <div>
                 タイトル <input type="text" name="title" required> ※必須
             </div>
