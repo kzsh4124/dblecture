@@ -39,7 +39,8 @@ try{
     //承認システム select ... from  ... where approval = 0
     //承認待ちを表示$rows_waitに入れる
     $sql1=$selecter.' WHERE approval = 0;';
-    $stmt1 = $pdo->query($sql1);
+    $stmt1 = $pdo->prepare($sql1);
+    $stmt1->execute();
     $rows_wait = $stmt1->fetchAll();
 
 
