@@ -38,7 +38,7 @@ try{
 
     //承認システム select ... from  ... where approval = 0
     //承認待ちを表示$rows_waitに入れる
-    $sql1=$selecter.' WHERE approval = 0';
+    $sql1=$selecter.' WHERE approval = 0;';
     $stmt1 = $pdo->query($sql1);
     $rows_wait = $stmt1->fetchAll();
 
@@ -46,7 +46,7 @@ try{
 
     //変更システム
     //全件取得
-    $sql2 = $selecter;
+    $sql2 = $selecter.';';
     $stmt2 = $pdo->query($sql2);
     $rows_all = $stmt2->fetchAll();
 
