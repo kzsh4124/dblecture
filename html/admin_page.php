@@ -38,17 +38,17 @@ try{
 
     //承認システム select ... from  ... where approval = 0
     //承認待ちを表示$rows_waitに入れる
-    $sql=$selecter.' WHERE approval = 0';
-    $stmt = $pdo->query($sql);
-    $rows_wait = $stmt->fetchAll();
+    $sql1=$selecter.' WHERE approval = 0';
+    $stmt1 = $pdo->query($sql1);
+    $rows_wait = $stmt1->fetchAll();
 
 
 
     //変更システム
     //全件取得
-    $sql = $selecter;
-    $stmt = $pdo->query($sql);
-    $rows_all = $stmt->fetchAll();
+    $sql2 = $selecter;
+    $stmt2 = $pdo->query($sql2);
+    $rows_all = $stmt2->fetchAll();
 
 }catch (PDOException $e) {
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
