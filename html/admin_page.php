@@ -42,6 +42,7 @@ try{
     $stmt1 = $pdo->prepare($sql1);
     $stmt1->execute();
     $rows_wait = $stmt1->fetchAll();
+    var_dump($rows_wait);
 
 
 
