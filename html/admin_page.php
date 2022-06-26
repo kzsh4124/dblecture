@@ -46,9 +46,9 @@ try{
 
     //変更システム
     //全件取得
-    $sql2 = $selecter.';';
+    /*$sql2 = $selecter.';';
     $stmt2 = $pdo->query($sql2);
-    $rows_all = $stmt2->fetchAll();
+    $rows_all = $stmt2->fetchAll(); */
 
 }catch (PDOException $e) {
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
