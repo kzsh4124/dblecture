@@ -39,22 +39,23 @@ try{
     //承認システム select ... from  ... where approval = 0
     //承認待ちを表示$rows_waitに入れる
     $sql1=$selecter.' WHERE approval = 0;';
-    $stmt1 = $pdo->prepare($sql1);
-    $stmt1->execute();
+    $stmt1 = $pdo->query($sql1);
     $rows_wait = $stmt1->fetchAll();
-    var_dump($rows_wait);
 
 
 
     //変更システム
     //全件取得
-    /*$sql2 = $selecter.';';
+    $sql2 = $selecter.';';
     $stmt2 = $pdo->query($sql2);
-    $rows_all = $stmt2->fetchAll(); */
+    $rows_all = $stmt2->fetchAll();
 
 }catch (PDOException $e) {
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
     exit($e->getMessage());
+}
+function h($str){
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 ?>
 
@@ -89,7 +90,7 @@ try{
                 <td><?=h($row_w['st_name'])?> </td>
                 <td><?=h($row_w['su_name'])?> </td>
                 <td><?=h($row_w['se_content']) ?></td>
-            <!--    <td><a href="<?='approval.php?id=',$row_w['se_id']?>">承認</a></td> -->
+                <td><a href="<?='approval.php?id=',$row_w['se_id']?>">承認</a></td>
             </tr>
 <?php endforeach; ?>
         </table>
@@ -116,8 +117,34 @@ try{
                 <td><?=h($row_a['st_name'])?> </td>
                 <td><?=h($row_a['su_name'])?> </td>
                 <td><?=h($row_a['se_content']) ?></td>
-            <!--    <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
-                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td> -->
+                <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
+                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
+<?php endforeach; ?>
+        </table>
+        <h2>変更、削除</h2>
+        <?= $sql?>
+        <table border="1">
+        <tr>
+                <td>id</td>
+                <td>ゼミ名</td>
+                <td>曜日</td>
+                <td>時間</td>
+                <td>開催状況</td>
+                <td>教科</td>
+                <td>概要</td>
+                <td>変更</td>
+            </tr>
+<?php foreach ($rows_all as $row_a): ?>
+            <tr>
+                <td><?=h($row_a['se_id'])?></td>
+                <td><?=h($row_a['se_name'])?></td>
+                <td><?=h($row_a['se_day'])?> </td>
+                <td><?=h($row_a['se_time'])?> </td>
+                <td><?=h($row_a['st_name'])?> </td>
+                <td><?=h($row_a['su_name'])?> </td>
+                <td><?=h($row_a['se_content']) ?></td>
+                <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
+                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
 <?php endforeach; ?>
         </table>
     </body>
