@@ -1,7 +1,8 @@
 <?php
 //ログイン認証
-$password = $_POST['pw'];
-
+if (isset($_POST['pw'])){
+    $password = $_POST['pw'];
+}
 if($password != '1050'){
     header('Content-Type: text/plain; charset=UTF-8', true);
     exit("このページへのアクセス権限がありません\n$password");
@@ -117,7 +118,7 @@ function h($str){
                 <td><?=h($row_a['st_name'])?> </td>
                 <td><?=h($row_a['su_name'])?> </td>
                 <td><?=h($row_a['se_content']) ?></td>
-                <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
+                <td><a href="<?='update_form.php?id=',$row_a['se_id']?>">変更</a></td>
                 <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
 <?php endforeach; ?>
         </table>

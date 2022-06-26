@@ -1,12 +1,12 @@
 <?php
-if (isset($_GET['id'])){
-    $id = $_GET['id'];
+if (isset($GET['id'])){
+    $id = $GET['id'];
 }else{
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
     exit("URLの異常です");
 }
 
-try {
+try{
     //PDOオブジェクトの生成
     $pdo = new PDO('mysql:dbname=s2111609;host=localhost;charset=utf8mb4', 's2111609', 'hogehoge', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -14,9 +14,10 @@ try {
     ]);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
-    $sql = "UPDATE seminar SET approval=1 WHERE id=?";
+    $sql = "DELETE FROM seminar WHERE id=?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$id]);
+
 }catch (PDOException $e) {
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
     exit($e->getMessage());
@@ -31,6 +32,6 @@ try {
     </head>
     <body>
         <h1>送信に成功しました。</h1>
-        <h2>正常に承認されました</h2>
+        <h2>正常に削除されました</h2>
         <a href="index.html">トップへ戻る</a>
     </body>
