@@ -1,6 +1,6 @@
 <?php
-if (isset($GET['id'])){
-    $id = $GET['id'];
+if (isset($_GET['id'])){
+    $id = $_GET['id'];
 }else{
     header('Content-Type: text/plain; charset=UTF-8', true, 500);
     exit("URLの異常です");
