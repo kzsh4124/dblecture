@@ -87,7 +87,7 @@ try{
                 <td><?=h($row_w['st_name'])?> </td>
                 <td><?=h($row_w['su_name'])?> </td>
                 <td><?=h($row_w['se_content']) ?></td>
-                <td><a href="<?='approval.php?id=',$row_w['se_id']?>">承認</a></td>
+            <!--    <td><a href="<?='approval.php?id=',$row_w['se_id']?>">承認</a></td> -->
             </tr>
 <?php endforeach; ?>
         </table>
@@ -114,8 +114,8 @@ try{
                 <td><?=h($row_a['st_name'])?> </td>
                 <td><?=h($row_a['su_name'])?> </td>
                 <td><?=h($row_a['se_content']) ?></td>
-                <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
-                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
+            <!--    <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
+                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td> -->
 <?php endforeach; ?>
         </table>
     </body>
