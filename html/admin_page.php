@@ -90,7 +90,12 @@ function h($str){
                 <td><?=h($row_w['st_name'])?> </td>
                 <td><?=h($row_w['su_name'])?> </td>
                 <td><?=h($row_w['se_content']) ?></td>
-                <td><a href="<?='approval.php?id=',$row_w['se_id']?>">承認</a></td>
+                <td>
+                <form method="post" action="<?='approval.php?id=',$row_a['se_id']?>">
+                    <input type="hidden" name="pw" value="<?= $password ?>">
+                    <input type="submit" name="submit" value="承認">
+                    </form>
+                </td>
             </tr>
 <?php endforeach; ?>
         </table>
@@ -127,7 +132,7 @@ function h($str){
                 <td>
                 <form method="post" action="<?='delete.php?id=',$row_a['se_id']?>">
                     <input type="hidden" name="pw" value="<?= $password ?>">
-                    <input type="submit" name="submit" value="更新">
+                    <input type="submit" name="submit" value="削除">
                     </form>
                 </td>
 <?php endforeach; ?>

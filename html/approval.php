@@ -1,4 +1,13 @@
 <?php
+//パスワード認証
+if (isset($_POST['pw'])){
+    $password = $_POST['pw'];
+}
+if($password != '1050'){
+    header('Content-Type: text/plain; charset=UTF-8', true);
+    exit("このページへのアクセス権限がありません\n$password");
+}
+
 if (isset($_GET['id'])){
     $id = $_GET['id'];
 }else{

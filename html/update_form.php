@@ -1,4 +1,13 @@
 <?php
+//パスワード認証
+if (isset($_POST['pw'])){
+    $password = $_POST['pw'];
+}
+if($password != '1050'){
+    header('Content-Type: text/plain; charset=UTF-8', true);
+    exit("このページへのアクセス権限がありません\n$password");
+}
+
 if (isset($_GET['id'])){
     $id = $_GET['id'];
 }else{
@@ -74,6 +83,7 @@ if (isset($_GET['id'])){
                 <label for="content">説明</label><br>
                 <textarea id="content" name="content" rows="3" cols="40" placeholder="ゼミの概要を簡単に記述"></textarea>
             </div>
+            <input type="hidden" name="pw" value="<?= $password ?>">
             <input type="submit" name="submit">
         </form>
     </body>
