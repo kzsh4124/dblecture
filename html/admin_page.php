@@ -118,8 +118,18 @@ function h($str){
                 <td><?=h($row_a['st_name'])?> </td>
                 <td><?=h($row_a['su_name'])?> </td>
                 <td><?=h($row_a['se_content']) ?></td>
-                <td><a href="<?='update_form.php?id=',$row_a['se_id']?>">変更</a></td>
-                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
+                <td>
+                    <form method="post" action="<?='update_form.php?id=',$row_a['se_id']?>">
+                    <input type="hidden" name="pw" value="<?= $password ?>">
+                    <input type="submit" name="submit" value="更新">
+                    </form>
+                </td>
+                <td>
+                <form method="post" action="<?='delete.php?id=',$row_a['se_id']?>">
+                    <input type="hidden" name="pw" value="<?= $password ?>">
+                    <input type="submit" name="submit" value="更新">
+                    </form>
+                </td>
 <?php endforeach; ?>
         </table>
     </body>
