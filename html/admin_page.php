@@ -95,32 +95,7 @@ function h($str){
 <?php endforeach; ?>
         </table>
 
-        <h2>変更、削除</h2>
-        <?= $sql2?>
-        <table border="1">
-        <tr>
-                <td>id</td>
-                <td>ゼミ名</td>
-                <td>曜日</td>
-                <td>時間</td>
-                <td>開催状況</td>
-                <td>教科</td>
-                <td>概要</td>
-                <td>変更</td>
-            </tr>
-<?php foreach ($rows_all as $row_a): ?>
-            <tr>
-                <td><?=h($row_a['se_id'])?></td>
-                <td><?=h($row_a['se_name'])?></td>
-                <td><?=h($row_a['se_day'])?> </td>
-                <td><?=h($row_a['se_time'])?> </td>
-                <td><?=h($row_a['st_name'])?> </td>
-                <td><?=h($row_a['su_name'])?> </td>
-                <td><?=h($row_a['se_content']) ?></td>
-                <td><a href="<?='update.php?id=',$row_a['se_id']?>">変更</a></td>
-                <td><a href="<?='delete.php?id=',$row_a['se_id']?>">削除</a></td>
-<?php endforeach; ?>
-        </table>
+
         <h2>変更、削除</h2>
         <?= $sql?>
         <table border="1">
