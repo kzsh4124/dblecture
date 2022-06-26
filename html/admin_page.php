@@ -66,6 +66,7 @@ try{
     <body>
         <h1>管理者画面</h1>
         <h2>承認待ち</h2>
+        <?= $sql1 ?>
         <table border="1">
             <tr>
                 <td>id</td>
@@ -92,7 +93,7 @@ try{
         </table>
 
         <h2>変更、削除</h2>
-        <?= $sql?>
+        <?= $sql2?>
         <table border="1">
         <tr>
                 <td>id</td>
