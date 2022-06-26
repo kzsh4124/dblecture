@@ -1,7 +1,7 @@
 <?php
 //ログイン認証
 if(isset($_POST['password'])){
-    $password = (string)$_POST['password'];
+    $password = $_POST['pw'];
 }
 if($password != '1050'){
     header('Content-Type: text/plain; charset=UTF-8', true);
